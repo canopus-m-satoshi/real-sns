@@ -4,6 +4,18 @@ const userRouter = require('./routes/users')
 const authRouter = require('./routes/auth')
 const postRouter = require('./routes/posts')
 const PORT = 5000
+const mongoose = require('mongoose')
+
+// データベース接続
+require('dotenv').config()
+mongoose
+  .connect(process.env.MONGOURL)
+  .then(() => {
+    console.log('DBと接続中')
+  })
+  .catch((err) => {
+    console.log(`Error: ${err}`)
+  })
 
 // ミドルウェア
 app.use('/api/users', userRouter)

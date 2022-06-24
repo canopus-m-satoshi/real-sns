@@ -53,3 +53,5 @@ const UserSchema = new mongoose.Schema(
 
   { timestamps: true }, // データを作成した時間を自動的に格納
 )
+
+module.exports = mongoose.model('User', UserSchema)
