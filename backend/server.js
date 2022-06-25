@@ -18,8 +18,13 @@ mongoose
   })
 
 // ミドルウェア
+app.use(express.json()) // JSON形式にする
 app.use('/api/users', userRouter)
 app.use('/api/auth', authRouter)
 app.use('/api/posts', postRouter)
+
+app.get('/', (req, res) => {
+  res.send('hello')
+})
 
 app.listen(PORT, () => console.log('サーバーが起動しました'))
