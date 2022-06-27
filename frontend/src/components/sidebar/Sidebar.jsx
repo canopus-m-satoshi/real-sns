@@ -18,7 +18,7 @@ const Sidebar = () => {
         <ul className="sidebarList">
           <li className="sidebarListItem">
             <Home className="sidebarIcon" />
-            <span className="sidarListItemText">Home</span>
+            <span className="sidarListItemText">ホーム</span>
           </li>
           <li className="sidebarListItem">
             <Search className="sidebarIcon" />
@@ -46,7 +46,12 @@ const Sidebar = () => {
           </li>
         </ul>
         <hr className="sidebarHr" />
-        <ul className="sidebarFriendList"></ul>
+        <ul className="sidebarFriendList">
+          <li className="sidebarFriendListItem">
+            <img src="/assets/person/2.jpeg" alt="" />
+            <span className="sidebarFriendName">Shin Code</span>
+          </li>
+        </ul>
       </div>
     </div>
   )
