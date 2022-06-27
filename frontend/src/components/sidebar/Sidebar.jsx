@@ -48,7 +48,11 @@ const Sidebar = () => {
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
           <li className="sidebarFriendListItem">
-            <img src="/assets/person/2.jpeg" alt="" />
+            <img
+              src="/assets/person/2.jpeg"
+              alt=""
+              className="sidebarFriendImg"
+            />
             <span className="sidebarFriendName">Shin Code</span>
           </li>
         </ul>
