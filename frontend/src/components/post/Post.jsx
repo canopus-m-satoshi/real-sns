@@ -3,6 +3,8 @@ import { MoreVert } from '@mui/icons-material'
 import React from 'react'
 import './Post.css'
 
+import { Users } from '../../dummydata'
+
 const Post = ({ post }) => {
   return (
     <div className="post">
@@ -10,11 +12,16 @@ const Post = ({ post }) => {
         <div className="postTop">
           <div className="postTopLeft">
             <img
-              src="/assets/person/1.jpeg"
+              src={
+                Users.filter((user) => user.id === post.id)[0].profilePicture
+              }
               alt=""
               className="postProfileImg"
             />
-            <span className="postUsername">{post.username}</span>
+            <span className="postUsername">
+              {Users.filter((user) => user.id === post.id)[0].username}
+            </span>
+
             <span className="postDate">{post.date}</span>
           </div>
           <div className="postTopRight">
