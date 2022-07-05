@@ -7,6 +7,9 @@ import {
   Search,
   Settings,
 } from '@mui/icons-material'
+
+import { Link } from 'react-router-dom'
+
 import React from 'react'
 
 import './Sidebar.css'
@@ -20,31 +23,45 @@ const Sidebar = () => {
         <ul className="sidebarList">
           <li className="sidebarListItem">
             <Home className="sidebarIcon" />
-            <span className="sidarListItemText">ホーム</span>
+            <Link to="/">
+              <span className="sidarListItemText">ホーム</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <Search className="sidebarIcon" />
-            <span className="sidarListItemText">検索</span>
+            <Link to="/">
+              <span className="sidarListItemText">検索</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <Notifications className="sidebarIcon" />
-            <span className="sidarListItemText">通知</span>
+            <Link to="/">
+              <span className="sidarListItemText">通知</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <MessageRounded className="sidebarIcon" />
-            <span className="sidarListItemText">メッセージ</span>
+            <Link to="/">
+              <span className="sidarListItemText">メッセージ</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <Bookmark className="sidebarIcon" />
-            <span className="sidarListItemText">ブックマーク</span>
+            <Link to="/">
+              <span className="sidarListItemText">ブックマーク</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <Person className="sidebarIcon" />
-            <span className="sidarListItemText">プロフィール</span>
+            <Link to="/profile/shincode">
+              <span className="sidarListItemText">プロフィール</span>
+            </Link>
           </li>
           <li className="sidebarListItem">
             <Settings className="sidebarIcon" />
-            <span className="sidarListItemText">設定</span>
+            <Link to="/">
+              <span className="sidarListItemText">設定</span>
+            </Link>
           </li>
         </ul>
         <hr className="sidebarHr" />
