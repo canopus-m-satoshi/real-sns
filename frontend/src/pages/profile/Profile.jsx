@@ -7,6 +7,8 @@ import Timeline from '../../components/timeline/Timeline'
 import './Profile.css'
 
 const Profile = () => {
+  const PUBLIC_FOLDER = import.meta.env.VITE_REACT_APP_PUBLIC_FOLDER
+
   return (
     <>
       <Topbar />
@@ -16,12 +18,12 @@ const Profile = () => {
           <div className="profileRightTop">
             <div className="profileCover">
               <img
-                src="/assets/post/3.jpeg"
+                src={PUBLIC_FOLDER + '/post/1.jpeg'}
                 alt=""
                 className="profileCoverImg"
               />
               <img
-                src="/assets/person/1.jpeg"
+                src={PUBLIC_FOLDER + '/person/1.jpeg'}
                 alt=""
                 className="profileUserImg"
               />
